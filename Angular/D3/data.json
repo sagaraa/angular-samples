@@ -1,0 +1,18 @@
+[
+	{
+          "status":"AccountRequested",
+          "No of customer":71,
+        },
+        {
+          "status":"Approved",
+          "No of customer":58,
+        },
+        {
+          "status":"Escalated",
+          "No of customer":45,
+        },
+        {
+          "status":"Rejected",
+          "No of customer":32,
+        }
+]

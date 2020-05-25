@@ -1,0 +1,8 @@
+<h1>My App</h1>
+
+<a *ngFor= "let route of routes" [routerLink]="route.url">{{route.linkName}} <br> </a>
+<!-- this needed for routing -->
+<svg id = "svgelem" height = "200" xmlns = "http://www.w3.org/2000/svg">
+    <polyline points = "0,0 0,20 20,20 20,40 40,40 40,60" fill = "red" />
+ </svg>
+ <router-outlet></router-outlet>

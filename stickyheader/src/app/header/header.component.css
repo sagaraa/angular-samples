@@ -1,0 +1,14 @@
+.sticky {
+    background: #fff;
+    box-shadow: 0 3px 12px 0 rgba(0,0,0,.08);
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100%;
+}
+div {
+    background-color: black;
+    width: 100%;
+    height: 100px;
+    
+}

@@ -1,0 +1,16 @@
+body {
+    background: #333;
+}
+
+.box {
+    background: white;
+    height: 400px;
+    width: 400px;
+    position: relative;
+    animation-name: myanimation;
+    animation-duration: 4s;
+}
+
+@keyframes myanimation {
+    
+}

@@ -1,0 +1,28 @@
+#soundbites1{
+    text-align: center;
+    background-color: #f7f4f3;
+}
+h2 {
+    text-align: center;
+}
+#soundbites{
+    text-align: center;
+    width:100%;
+    height: 200px;
+    margin: 0, auto;
+}
+.reviews {
+    float: left;
+    width: 25%;
+}
+#onereview{
+    width:25%;
+}
+.reviewcontent{
+    float: left;
+    width: 50%;
+}
+img {
+    height: 100px;
+    width: 100px;
+}

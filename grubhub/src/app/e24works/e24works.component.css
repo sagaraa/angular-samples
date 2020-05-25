@@ -1,0 +1,25 @@
+body{
+    height:100px;
+}
+div {
+    text-align: center;
+    height: 400px;
+    padding: 0, 0;
+    margin-bottom: -80px;
+}
+#howtogrub{
+    width:100%;
+    height: 400px;
+    margin: 0, auto;
+}
+.process {
+    float: left;
+    width: 33.3%;
+}
+img {
+    width: 100px;
+    height: 100px;
+}
+p {
+    margin-bottom: 0;
+}

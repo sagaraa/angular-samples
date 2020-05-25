@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_users" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="809a3f44-f151-4225-8db5-d8f7ef0ad887">
+ <property name="ireport.zoom" value="1.0"/>
+ <property name="ireport.x" value="0"/>
+ <property name="ireport.y" value="0"/>
+ <queryString>
+  <![CDATA[
+  SELECT  
+            KYCBLK_CUSTOMER_KYC_STATUS_META.[STATUS], 
+            COUNT(EKYC_STATUS) as count   
+            FROM  KYCBLK_CUSTOMER_KYC_STATUS    INNER JOIN  KYCBLK_CUSTOMER_KYC_STATUS_META  
+            ON KYCBLK_CUSTOMER_KYC_STATUS.EKYC_STATUS = KYCBLK_CUSTOMER_KYC_STATUS_META.CUSTOMER_KYC_STATUS_META_KEY   
+            WHERE KYCBLK_CUSTOMER_KYC_STATUS.IS_ACTIVE = 1  
+            GROUP BY [STATUS]
+  ]]>
+ </queryString>
+ 
+ <field name="STATUS" class="java.lang.String">
+  <fieldDescription><![CDATA[]]></fieldDescription>
+ </field>
+
+ <field name="count" class="java.lang.Integer">
+  <fieldDescription><![CDATA[]]></fieldDescription>
+ </field>
+  
+ <background>
+  <band splitType="Stretch"/>
+ </background>
+ <title>
+  <band height="79" splitType="Stretch">
+   <staticText>
+    <reportElement x="0" y="0" width="555" height="34" uuid="b30be92d-c6fd-4736-ad12-76a9317e274b"/>
+    <textElement textAlignment="Center" verticalAlignment="Middle">
+     <font size="16" isBold="true"/>
+    </textElement>
+    <text><![CDATA[Customer KYC Status]]></text>
+   </staticText>
+  </band>
+ </title>
+ <pageHeader>
+  <band splitType="Stretch"/>
+ </pageHeader>
+ <columnHeader>
+  <band height="20" splitType="Stretch">
+   
+   <staticText>
+    <reportElement x="150" y="0" width="175" height="20" uuid="2abd9626-1974-4963-bc6c-9bbc75b95ac6"/>
+    <box>
+     <pen lineWidth="0.5"/>
+     <topPen lineWidth="0.5"/>
+     <leftPen lineWidth="0.5"/>
+     <bottomPen lineWidth="0.5"/>
+     <rightPen lineWidth="0.5"/>
+    </box>
+    <textElement textAlignment="Center" verticalAlignment="Middle">
+     <font isBold="true"/>
+    </textElement>
+    <text><![CDATA[KYC Status]]></text>
+   </staticText>
+
+   <staticText>
+    <reportElement x="325" y="0" width="150" height="20" uuid="bf733f35-fe25-46fc-9086-9e669d555f8c"/>
+    <box>
+     <pen lineWidth="0.5"/>
+     <topPen lineWidth="0.5"/>
+     <leftPen lineWidth="0.5"/>
+     <bottomPen lineWidth="0.5"/>
+     <rightPen lineWidth="0.5"/>
+    </box>
+    <textElement textAlignment="Center" verticalAlignment="Middle">
+     <font isBold="true"/>
+    </textElement>
+    <text><![CDATA[Number of Customer]]></text>
+   </staticText>
+
+  </band>
+ </columnHeader>
+ <detail>
+  <band height="20" splitType="Stretch">
+
+   <textField>
+    <reportElement stretchType="RelativeToBandHeight" x="150" y="0" width="175" height="20" uuid="2abd9626-1974-4963-bc6c-9bbc75b95ac6"/>
+    <box>
+     <pen lineWidth="0.5"/>
+     <topPen lineWidth="0.5"/>
+     <leftPen lineWidth="0.5"/>
+     <bottomPen lineWidth="0.5"/>
+     <rightPen lineWidth="0.5"/>
+    </box>
+    <textElement textAlignment="Center" verticalAlignment="Middle"/>
+    <textFieldExpression><![CDATA[$F{STATUS}]]></textFieldExpression>
+   </textField>
+
+   <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+    <reportElement stretchType="RelativeToBandHeight" x="325" y="0" width="150" height="20" uuid="bf733f35-fe25-46fc-9086-9e669d555f8c"/>
+    <box leftPadding="3">
+     <pen lineWidth="0.5"/>
+     <topPen lineWidth="0.5"/>
+     <leftPen lineWidth="0.5"/>
+     <bottomPen lineWidth="0.5"/>
+     <rightPen lineWidth="0.5"/>
+    </box>
+    <textElement textAlignment="Center" verticalAlignment="Middle"/>
+    <textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
+   </textField>
+  </band>
+ </detail>
+ <columnFooter>
+  <band splitType="Stretch"/>
+ </columnFooter>
+ <pageFooter>
+  <band splitType="Stretch"/>
+ </pageFooter>
+ <summary>
+  <band splitType="Stretch"/>
+ </summary>
+</jasperReport>

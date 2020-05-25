@@ -1,0 +1,76 @@
+body {
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/02/65/03/495786f51076c97.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 350px; /* You must set a specified height */
+    width: 100%;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    margin-left: 0%;
+    margin-top: -40px;
+}
+
+.welcome {
+    text-align: center;
+}
+.zip{
+    width: 50%;
+    margin-top: 10%;
+    margin: auto;
+}
+.zipInput{
+    width: auto;
+    font-size: 2em;
+    border-radius: 4px;
+}
+.zipP{
+    margin-top: 20%;
+    text-align: left;
+}
+
+#zipButton {
+    margin-left: 10px;
+    border-radius: 4px;
+    box-sizing: initial;
+    text-decoration-color: aliceblue;
+    text-align: center;
+    background-color: #007ab2;
+    text-decoration:brown;
+    font-size: 16.5px;
+    height: 30px;
+    font-family: grubhubsans-bold;
+}
+
+input[type="text"] {
+    width: 60%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    border-color: dodgerBlue;
+    box-shadow: 0 0 8px 0 dodgerBlue;
+  }
+  
+  .inputWithIcon input[type="text"] {
+    left: 10%;
+    padding-left: 40px;
+  }
+  
+  .inputWithIcon {
+    position: relative;
+  }
+  
+  .inputWithIcon i {
+    margin-top: 5%;
+    position: absolute;
+    left: 34;
+    top: 8px;
+    padding: 9px 8px;
+    color: #aaa;
+    transition: 0.3s;
+  }
